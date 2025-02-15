@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.scss";
 
-// Ensure BASE_URL is defined, otherwise default to "/"
-const BASE_URL = import.meta.env.VITE_BASE_URL || "/";
-const IMAGE_PATH = import.meta.env.VITE_IMAGE_PATH || "images/";
+// Import images correctly for Vite
+import spacewar from "/images/spacewar.jpg";
+import comingSoon from "/images/coming-soon.jpg"; 
 
 const Home = () => {
   return (
@@ -19,28 +19,28 @@ const Home = () => {
         <div className="games-grid">
           {/* First Game - Playable */}
           <div className="game-card">
-            <img src={`${BASE_URL}images/spacewar.png`} alt="SpaceWar" />
+            <img src={spacewar} alt="SpaceWar" />
             <h3>SpaceWar</h3>
             <Link to="/game/game1">
               <button>Play Now</button>
             </Link>
           </div>
 
-          {/* Coming Soon Games */}
+          {/* Coming Soon Games - All use the same image */}
           <div className="game-card coming-soon">
-            <img src={`${BASE_URL}${IMAGE_PATH}coming-soon-1.jpg`} alt="Coming Soon" />
+            <img src={comingSoon} alt="Coming Soon" />
             <h3>Infinity Run</h3>
             <span className="coming-soon-label">Coming Soon</span>
           </div>
 
           <div className="game-card coming-soon">
-            <img src={`${BASE_URL}${IMAGE_PATH}coming-soon-2.jpg`} alt="Coming Soon" />
+            <img src={comingSoon} alt="Coming Soon" />
             <h3>Tic Tac Toe</h3>
             <span className="coming-soon-label">Coming Soon</span>
           </div>
 
           <div className="game-card coming-soon">
-            <img src={`${BASE_URL}${IMAGE_PATH}coming-soon-3.jpg`} alt="Coming Soon" />
+            <img src={comingSoon} alt="Coming Soon" />
             <h3>Block Stack</h3>
             <span className="coming-soon-label">Coming Soon</span>
           </div>
