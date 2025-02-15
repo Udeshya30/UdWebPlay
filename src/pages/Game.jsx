@@ -1,20 +1,20 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./Game.scss";
 
 const Game = () => {
   const { gameId } = useParams();
-  const gamePath = `${window.location.origin}/UdWebPlay/games/${gameId}/index.html`;  // ✅ Fix path
+  const navigate = useNavigate();
+  const gamePath = `${window.location.origin}/UdWebPlay/games/${gameId}/index.html`;
 
   return (
     <div className="game-container">
+      <button className="back-button" onClick={() => navigate("/")}>🏠 Back to Home</button>
       <h1>Playing {gameId}</h1>
       <iframe
-        src={gamePath}  // ✅ Corrected URL for GitHub Pages
+        src={gamePath}
         title="Unity WebGL Game"
-        width="100%"
-        height="600px"
-        style={{ border: "none" }}
+        className="game-iframe"  // ✅ Fullscreen fix
       ></iframe>
     </div>
   );
