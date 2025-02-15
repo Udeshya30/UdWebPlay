@@ -6,7 +6,7 @@ import "./styles/global.scss";
 
 function App() {
   return (
-    <Router> {/* ✅ Use HashRouter instead of BrowserRouter */}
+    <Router> {/* ✅ Use HashRouter for GitHub Pages */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/game/:gameId" element={<Game />} />
