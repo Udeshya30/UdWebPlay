@@ -9,12 +9,14 @@ const Game = () => {
 
   return (
     <div className="game-container">
-      <button className="back-button" onClick={() => navigate("/")}>🏠 Back to Home</button>
+      <button className="back-button" onClick={() => navigate("/")}>
+        <i className="fas fa-home"></i> Back to Home
+      </button>
       <h1>Playing {gameId}</h1>
       <iframe
         src={gamePath}
         title="Unity WebGL Game"
-        className="game-iframe"  // ✅ Fullscreen fix
+        className="game-iframe"
       ></iframe>
     </div>
   );
