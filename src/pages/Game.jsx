@@ -4,13 +4,13 @@ import "./Game.scss";
 
 const Game = () => {
   const { gameId } = useParams();
-  const gamePath = `https://udeshiya30.github.io/UdWebPlay/games/${gameId}/index.html`;
+  const gamePath = `${process.env.PUBLIC_URL}/games/${gameId}/index.html`;
 
   return (
     <div className="game-container">
       <h1>Playing {gameId}</h1>
       <iframe
-        src={gamePath}  // ✅ Fixed URL for GitHub Pages
+        src={gamePath}  // ✅ Fixed URL
         title="Unity WebGL Game"
         width="100%"
         height="600px"
