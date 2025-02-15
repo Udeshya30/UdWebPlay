@@ -1,15 +1,27 @@
+body {
+  overflow-x: hidden; // ✅ Prevents horizontal scrolling
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll; // ✅ Allows scrolling but hides the scrollbar
+  scrollbar-width: none; // ✅ Hides scrollbar in Firefox
+  -ms-overflow-style: none; // ✅ Hides scrollbar in IE/Edge
+}
+
+body::-webkit-scrollbar {
+  display: none; // ✅ Hides scrollbar in Chrome/Safari
+}
+
 .home-container {
   width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;  // ✅ Center align content
-  justify-content: center;
+  align-items: center;
   text-align: center;
   background: linear-gradient(135deg, #141e30, #243b55); // ✅ Professional gradient
   color: #ffffff;
   font-family: "Poppins", sans-serif;
-  padding: 20px;
+  padding: 40px 20px; // ✅ More padding for breathing room
 
   .header {
     h1 {
@@ -17,99 +29,80 @@
       font-weight: bold;
       color: #ffcc00;
     }
+
     p {
       font-size: 1.2rem;
       margin-bottom: 20px;
     }
   }
 
-  .games-list {
+  .games-list,
+  .ar-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px; // ✅ Adds space between sections
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+  }
+
+  .games-grid {
+    display: flex; // ✅ Switch from grid to flex for better spacing
+    flex-wrap: wrap; // ✅ Ensures responsive wrapping
+    justify-content: center; // ✅ Centers cards
+    gap: 40px; // ✅ Ensures proper spacing
     width: 90%;
-    max-width: 1200px;
-    
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      color: #ffcc00;
+    max-width: 1200px; // ✅ Increased width for a better layout
+  }
+
+  .game-card {
+    background: #1a1a1a;
+    padding: 15px;
+    width: 260px; // ✅ Slightly increased width for uniformity
+    text-align: center;
+    border-radius: 12px; // ✅ Softer card edges
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      transform: scale(1.05);
     }
 
-    .games-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center; // ✅ Center game cards
-      gap: 20px;
-      padding: 20px;
-      
-      .game-card {
-        background: #1a1a1a;
-        padding: 15px;
-        width: 250px; // Ensures consistent width
-        text-align: center;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-        transition: transform 0.3s ease-in-out;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      
-        &:hover {
-          transform: scale(1.05);
-        }
-      
-        img {
-          width: 100%; // Ensures full width
-          aspect-ratio: 16 / 9; // ✅ Fixes aspect ratio
-          object-fit: cover; // ✅ Ensures image fills the space without stretching
-          border-radius: 10px;
-        }
-      
-        h3 {
-          margin-top: 10px;
-          color: #fff;
-          font-size: 1.2rem;
-        }
-      
-        button {
-          background: #ff6600;
-          color: white;
-          border: none;
-          padding: 10px 15px;
-          margin-top: 10px;
-          cursor: pointer;
-          border-radius: 5px;
-          transition: 0.3s;
-      
-          &:hover {
-            background: #e65c00;
-          }
-        }
-      }
-      
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9; // ✅ Ensures uniform image sizes
+      object-fit: cover;
+      border-radius: 12px;
+    }
 
-      .coming-soon {
-        position: relative;
-        opacity: 0.8;
+    h3 {
+      margin-top: 15px; // ✅ Added more spacing
+      color: #fff;
+      font-size: 1.3rem;
+    }
 
-        .coming-soon-label {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          background: rgba(255, 0, 0, 0.8);
-          color: white;
-          padding: 8px 12px;
-          font-size: 1rem;
-          font-weight: bold;
-          border-radius: 5px;
-        }
-      }
+    .coming-soon-label {
+      background: red;
+      color: white;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-top: 10px;
     }
   }
 
   .footer {
-    margin-top: auto;
-    padding: 10px;
-    font-size: 0.9rem;
+    margin-top: 50px; // ✅ Pushes footer down for balance
+    padding: 15px;
+    font-size: 1rem;
     color: #ccc;
   }
 }
