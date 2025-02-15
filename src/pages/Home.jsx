@@ -15,7 +15,7 @@ const Home = () => {
         <div className="games-grid">
           {/* First Game - Playable */}
           <div className="game-card">
-            <img src="/images/spacewar.png" alt="SpaceWar" />
+            <img src="/public/images/spacewar.png" alt="SpaceWar" />
             <h3>SpaceWar</h3>
             <Link to="/game/game1">
               <button>Play Now</button>
