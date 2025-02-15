@@ -1,12 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Game from "./pages/Game";
 import "./styles/global.scss";
 
 function App() {
   return (
-    <Router>
+    <Router> {/* ✅ Use HashRouter instead of BrowserRouter */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/game/:gameId" element={<Game />} />
