@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.scss";
 
 const Home = () => {
@@ -12,16 +13,12 @@ const Home = () => {
       <section className="games-list">
         <h2>Available Games</h2>
         <div className="games-grid">
-          {/* Example Game Cards */}
           <div className="game-card">
             <img src="/images/game1.jpg" alt="Game 1" />
             <h3>Game 1</h3>
-            <button>Play Now</button>
-          </div>
-          <div className="game-card">
-            <img src="/images/game2.jpg" alt="Game 2" />
-            <h3>Game 2</h3>
-            <button>Play Now</button>
+            <Link to="/game/game1">
+              <button>Play Now</button>
+            </Link>
           </div>
         </div>
       </section>
