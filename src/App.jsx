@@ -1,37 +1,10 @@
-// import React from "react";
-// import { HashRouter as Router, Route, Routes } from "react-router-dom";
-// import Navbar from "./components/Navbar/Navbar";
-// import Footer from "./components/Footer/Footer";
-// import Home from "./pages/Home/Home";
-// import Game from "./pages/Game/Game";
-// import About from "./pages/About/About";
-// import Contact from "./pages/Contact/Contact";
-// import "./styles/global.scss";
-
-// function App() {
-//   return (
-//     <Router> {/* ✅ Use HashRouter for GitHub Pages */}
-//       <Navbar /> {/* ✅ Added Navbar */}
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/game/:gameId" element={<Game />} />
-//         <Route path="/about" element={<About />} />
-//         <Route path="/contact" element={<Contact />} />
-//       </Routes>
-//       <Footer /> {/* ✅ Added Footer */}
-//     </Router>
-//   );
-// }
-
-// export default App;
-
-
 import React, { useEffect } from "react";
 import { HashRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Game from "./pages/Game/Game";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import Projects from "./pages/Projects/Projects";  // ✅ Import Projects Page
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import "./styles/global.scss";
@@ -55,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/game/:gameId" element={<Game />} />
+        <Route path="/projects" element={<Projects />} /> {/* ✅ Added Projects Page */}
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

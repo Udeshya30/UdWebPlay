@@ -6,10 +6,12 @@ import "./Home.scss";
 import spacewar from "/images/spacewar.jpg";
 import comingSoon from "/images/coming-soon.jpg"; 
 import arFeature from "/images/ar-placeholder.jpg"; // Add AR placeholder image
+import HeroSection from "../../components/HeroSection/HeroSection";
 
 const Home = () => {
   return (
     <div className="home-container">
+      <HeroSection />
       <header className="header">
         <h1>Welcome to UdWebPlay 🎮</h1>
         <p>Play and explore amazing web games!</p>
