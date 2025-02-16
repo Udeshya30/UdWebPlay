@@ -7,7 +7,7 @@ import Contact from "./pages/Contact/Contact";
 import Projects from "./pages/Projects/Projects";  // ✅ Import Projects Page
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import "./styles/global.scss";
+import './styles/global.scss';
 
 // ✅ Function to scroll to top on page change
 const ScrollToTop = () => {

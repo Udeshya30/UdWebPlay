@@ -1,82 +1,84 @@
+@use "../../styles/variables.scss" as *; // ✅ Import Global Variables
+
 .contact-container {
-  width: 100vw; // ✅ Full width
-  min-height: 100vh; // ✅ Full height
+  width: 100%;
+  background: $contact-bg; // ✅ Light Gray Background
+  padding: 80px 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 50px 0;
-  background-color: #0f172a; // ✅ Background color to match the website theme
 
   .contact-content {
-    width: 90%;
-    max-width: 1200px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    max-width: 1000px;
+    gap: 50px;
 
     .contact-details {
-      width: 45%;
-      background: #111827;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+      flex: 1;
+      text-align: left;
 
       h2 {
-        color: #ffffff;
-        font-size: 2rem;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: $text-primary;
       }
 
       .designation {
-        color: #ffcc00;
         font-size: 1.2rem;
-        margin-bottom: 20px;
+        color: $text-secondary;
+        margin-bottom: 10px;
       }
 
       .contact-info {
-        color: #cccccc;
         font-size: 1rem;
-        line-height: 1.5;
-
-        p {
-          margin-bottom: 8px;
-        }
+        color: $text-muted;
+        margin-bottom: 20px;
 
         a {
-          color: #ffcc00;
+          color: $primary-blue;
           text-decoration: none;
-          font-weight: bold;
-
           &:hover {
-            text-decoration: underline;
+            color: $hover-blue;
           }
         }
       }
 
       .contact-button {
-        margin-top: 20px;
-        width: 100%;
-        background: linear-gradient(45deg, #3b82f6, #1e40af);
-        color: white;
+        background: $primary-blue;
+        color: $white;
         border: none;
-        padding: 12px;
+        padding: 12px 24px;
         font-size: 1rem;
-        cursor: pointer;
         border-radius: 8px;
-        transition: 0.3s;
+        margin-top: 15px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
 
         &:hover {
-          background: linear-gradient(45deg, #1e40af, #3b82f6);
+          background: $hover-blue;
         }
       }
     }
 
     .contact-map {
-      width: 50%;
-      height: 400px; // ✅ Adjust height
+      flex: 1;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 4px 8px $shadow-light;
+      height: 300px;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 30px;
+
+      .contact-map {
+        width: 100%;
+      }
     }
   }
 }

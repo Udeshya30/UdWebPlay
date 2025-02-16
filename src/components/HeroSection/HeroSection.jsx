@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeroSection.scss";
-import profileImage from "../../assets/Images/Profile.png"; // ✅ Use your real image
-import resume from "../../assets/resume.pdf"; // ✅ Ensure this is placed correctly
+import profileImage from "../../assets/Images/Profile.png"; // ✅ Ensure image exists
+import resume from "../../assets/resume.pdf"; // ✅ Ensure file is in the correct path
 
 const HeroSection = () => {
   return (

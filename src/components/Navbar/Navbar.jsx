@@ -14,20 +14,35 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">
-        <Link to="/" onClick={handleHomeClick}>UdWebPlay</Link>
-      </div>
-      
-      {/* Hamburger Menu Button */}
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        ☰
-      </div>
+      <div className="navbar-container">
+        <Link className="navbar-brand" to="/" onClick={handleHomeClick}>
+          UdWebPlay
+        </Link>
 
-      <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <li><Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link></li>
-        <li><Link to="/about" onClick={() => setMenuOpen(false)}>About Me</Link></li>
-        <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
-      </ul>
+        {/* ✅ Mobile Menu Toggle */}
+        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
+        </button>
+
+        {/* ✅ Navbar Links */}
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <li>
+            <Link to="/projects" onClick={() => setMenuOpen(false)}>
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" onClick={() => setMenuOpen(false)}>
+              About Me
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };

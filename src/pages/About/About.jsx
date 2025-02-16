@@ -1,17 +1,15 @@
 import React from "react";
 import "./About.scss";
-import profileImage from "../../assets/Images/Profile.png"; // Add your image here
+import profileImage from "../../assets/Images/Profile.png"; // ✅ Ensure image exists
 
 const About = () => {
   return (
     <div className="about-container">
       <div className="about-content">
-        {/* Left Side - Profile Image */}
         <div className="about-image">
           <img src={profileImage} alt="Udeshya Kumar" />
         </div>
 
-        {/* Right Side - Details */}
         <div className="about-details">
           <h1>About Me</h1>
           <p className="description">
@@ -32,7 +30,6 @@ const About = () => {
             <li><b>Freelance</b> - Remote Developer (2019 - 2020)</li>
           </ul>
 
-          {/* Skills Section */}
           <h2>Skills</h2>
           <div className="skills">
             <div className="skill">
@@ -40,16 +37,24 @@ const About = () => {
               <div className="progress"><div className="bar" style={{ width: "90%" }}></div></div>
             </div>
             <div className="skill">
-              <span>MERN Stack</span>
+              <span>MERN Stack (MongoDB, Express, React, Node.js)</span>
               <div className="progress"><div className="bar" style={{ width: "85%" }}></div></div>
             </div>
             <div className="skill">
-              <span>C# & Node.js</span>
+              <span>C# & C++</span>
               <div className="progress"><div className="bar" style={{ width: "80%" }}></div></div>
             </div>
             <div className="skill">
-              <span>React & Web Development</span>
+              <span>Embarcadero RAD Studio</span>
               <div className="progress"><div className="bar" style={{ width: "75%" }}></div></div>
+            </div>
+            <div className="skill">
+              <span>SQLite & Database Management</span>
+              <div className="progress"><div className="bar" style={{ width: "80%" }}></div></div>
+            </div>
+            <div className="skill">
+              <span>Version Control (GitLab, GitHub)</span>
+              <div className="progress"><div className="bar" style={{ width: "85%" }}></div></div>
             </div>
           </div>
         </div>

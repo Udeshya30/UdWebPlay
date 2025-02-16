@@ -1,0 +1,56 @@
+// 🌟 Apple-Inspired Light Mode Theme
+
+// ✅ Base Colors
+$white: #FFFFFF;  // ✅ Pure White for backgrounds, cards, and sections
+$black: #000000;  // ✅ Black for contrast elements
+
+// ✅ Backgrounds
+$background-light: #F5F5F7;  // Light Gray for page background
+$navbar-bg-light: $white;    // ✅ Navbar & UI sections use Pure White
+$hero-bg: $white;            // ✅ Hero Section Background
+$home-bg: $white;            // ✅ Home Page Background
+$card-bg: $white;            // ✅ Game & Project Cards Background
+$projects-bg: #F8F8F8;       // ✅ Projects Section Background
+$about-bg: #F8F8F8;          // ✅ About Page Background
+$contact-bg: #F8F8F8;        // ✅ Contact Page Background
+$footer-bg: #F9F9F9;         // ✅ Light Gray for Footer Background
+$glass-effect: rgba(234, 234, 234, 0.5); // Frosted Glassmorphism Effect
+
+// ✅ Text Colors
+$text-primary: #2C2C2E;  // Charcoal Black for main text
+$text-secondary: #6E6E73; // Muted Gray for description text, subtitles
+$text-muted: #A1A1A6;     // Soft Muted Text for less important details
+$text-light: #D1D1D6;     // Soft Silver for labels & placeholder text
+
+// ✅ Borders & Shadows
+$border-light: #D1D1D6;   // Soft Silver for dividers & card borders
+$shadow-light: rgba(0, 0, 0, 0.05); // Light shadow for UI depth
+$shadow-medium: rgba(0, 0, 0, 0.15); // Slightly darker shadow for depth
+
+// ✅ Buttons & Links
+$primary-blue: #007AFF;  // Apple's Cool Blue for buttons/links
+$hover-blue: #0A84FF;    // Midnight Blue for hover states
+$button-bg-light: #F0F0F5; // Light Gray background for secondary buttons
+$button-border-light: #D1D1D6; // Border for outlined buttons
+
+// ✅ Cards & Containers
+$card-border: #E5E5EA;  // Soft border for card separation
+
+// ✅ Forms & Inputs
+$input-bg: $white;          // ✅ Input background
+$input-border: #D1D1D6;      // Light border for inputs
+$input-placeholder: #A1A1A6; // Soft muted placeholder text
+
+// ✅ Footer Styling
+$footer-text: #6E6E73;  // ✅ Muted Gray for Footer Text
+
+// ✅ Alerts & Messages
+$success-green: #34C759; // Apple’s success color
+$error-red: #FF3B30;     // Apple’s error color
+$warning-yellow: #FFCC00; // Apple’s warning color
+
+// ✅ Responsive Breakpoints (Bootstrap-Like)
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

@@ -1,8 +1,14 @@
+@use "../../styles/variables.scss" as *; // ✅ Import Global Variables
+
 .footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 1rem;
+  background: $footer-bg; // ✅ Uses defined Footer Background
+  color: $footer-text; // ✅ Muted gray for footer text
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1rem;
+  box-shadow: 0px -2px 6px $shadow-light; // ✅ Light shadow for separation
+
+  p {
+    margin: 0;
   }
-  
+}

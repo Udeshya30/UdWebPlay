@@ -5,7 +5,7 @@ import "./Home.scss";
 // Import images
 import spacewar from "/images/spacewar.jpg";
 import comingSoon from "/images/coming-soon.jpg"; 
-import arFeature from "/images/ar-placeholder.jpg"; // Add AR placeholder image
+import arFeature from "/images/ar-placeholder.jpg"; 
 import HeroSection from "../../components/HeroSection/HeroSection";
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
         <p>Play and explore amazing web games!</p>
       </header>
 
-      {/* Games Section */}
+      {/* ✅ Games Section */}
       <section className="games-list">
         <h2>Games</h2>
         <div className="games-grid">
@@ -41,7 +41,7 @@ const Home = () => {
             <span className="coming-soon-label">Coming Soon</span>
           </div>
 
-          <div className="game-card coming-soon"> {/* ✅ Added missing 4th game card */}
+          <div className="game-card coming-soon">
             <img src={comingSoon} alt="Coming Soon" />
             <h3>Block Stack</h3>
             <span className="coming-soon-label">Coming Soon</span>
@@ -49,7 +49,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* AR Features Section */}
+      {/* ✅ AR Features Section */}
       <section className="ar-list">
         <h2>Augmented Reality Features</h2>
         <div className="games-grid">

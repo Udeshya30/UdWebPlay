@@ -1,31 +1,30 @@
+@use "../../styles/variables.scss" as *; // ✅ Import Global Variables
+
 .projects-container {
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  background: $projects-bg; // ✅ Light Gray for a clean section
   text-align: center;
-  padding: 25px 15px; // ✅ Slightly reduced padding
-  background: linear-gradient(135deg, #141e30, #243b55);
+  padding: 60px 20px;
 
   h1 {
-    font-size: 1.8rem; // ✅ Slightly smaller heading
-    color: #ffcc00;
-    margin-bottom: 12px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $text-primary;
+    margin-bottom: 15px;
   }
 
   p {
-    font-size: 0.9rem; // ✅ Compact text
-    color: #ccc;
-    margin-bottom: 18px;
+    font-size: 1.2rem;
+    color: $text-secondary;
+    margin-bottom: 30px;
   }
 
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); // ✅ Slightly smaller cards
-    gap: 25px;
-    width: 100%;
-    max-width: 900px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
