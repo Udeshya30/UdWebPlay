@@ -17,7 +17,7 @@ const Home = () => {
 
       {/* Games Section */}
       <section className="games-list">
-        <h2>Available Games</h2>
+        <h2>Games</h2>
         <div className="games-grid">
           <div className="game-card">
             <img src={spacewar} alt="SpaceWar" />
@@ -70,10 +70,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <footer className="footer">
-        <p>© 2025 UdWebPlay | Developed by Udeshya Kumar</p>
-      </footer>
     </div>
   );
 };
