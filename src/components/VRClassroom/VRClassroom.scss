@@ -1,0 +1,102 @@
+@use "../../styles/variables.scss" as *;
+
+.vr-classroom-container {
+  background: $projects-bg;
+  padding: 50px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px $shadow-medium;
+  margin-top: 40px;
+
+  .vr-title {
+    font-size: 2.5rem;
+    color: $text-primary;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .vr-images-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .vr-card {
+    background: $white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px $shadow-medium;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.33% - 20px);
+    max-width: 300px;
+    margin-bottom: 20px;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .vr-card-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+  }
+
+  .vr-description-container {
+    text-align: left;
+    padding: 30px;
+    margin: 0 auto;
+
+    p {
+      color: $text-secondary;
+      font-size: 1.2rem;
+      line-height: 1.7;
+    }
+
+    h3 {
+      color: $text-primary;
+      font-size: 1.6rem;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        font-size: 1.1rem;
+        padding-left: 20px;
+        position: relative;
+        color: $text-secondary;
+
+        &:before {
+          content: "•";
+          color: $primary-blue;
+          font-size: 1.3rem;
+          font-weight: bold;
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    .vr-card {
+      width: calc(50% - 20px);
+    }
+  }
+
+  @media (max-width: $breakpoint-md) {
+    .vr-title {
+      font-size: 2rem;
+    }
+
+    .vr-card {
+      width: 100%;
+    }
+  }
+}

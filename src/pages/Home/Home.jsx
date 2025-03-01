@@ -7,18 +7,21 @@ import spacewar from "/images/spacewar.jpg";
 import comingSoon from "/images/coming-soon.jpg"; 
 import arFeature from "/images/ar-placeholder.jpg"; 
 import HeroSection from "../../components/HeroSection/HeroSection";
+import PlayStoreApps from "../../components/PlayStoreApps/PlayStoreApps";
 
 const Home = () => {
   return (
     <div className="home-container">
       <HeroSection />
-      <header className="header">
+
+      <PlayStoreApps />
+      {/* <header className="header">
         <h1>Welcome to UdWebPlay 🎮</h1>
         <p>Play and explore amazing web games!</p>
-      </header>
+      </header> */}
 
       {/* ✅ Games Section */}
-      <section className="games-list">
+      {/* <section className="games-list">
         <h2>Games</h2>
         <div className="games-grid">
           <div className="game-card">
@@ -47,10 +50,10 @@ const Home = () => {
             <span className="coming-soon-label">Coming Soon</span>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ✅ AR Features Section */}
-      <section className="ar-list">
+      {/* <section className="ar-list">
         <h2>Augmented Reality Features</h2>
         <div className="games-grid">
           <div className="game-card">
@@ -71,7 +74,7 @@ const Home = () => {
             <span className="coming-soon-label">Coming Soon</span>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
