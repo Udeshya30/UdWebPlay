@@ -3,7 +3,7 @@ import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import VRTerrain from "../../components/VRTerrain/VRTerrain"; 
 import VRClassroom from "../../components/VRClassroom/VRClassroom";
 import "./Projects.scss";
-import WebAR3D from "../../components/WebAR3D/WebAR3D";
+import WebAR3D from "../../components/WebAR3D";
 
 const projects = [
   {
