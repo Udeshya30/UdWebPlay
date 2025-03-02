@@ -1,5 +1,7 @@
 import React from "react";
 import "./Contact.scss";
+import { FaLocationArrow, FaLinkedin } from "react-icons/fa";
+import { MdCall, MdOutlineEmail } from "react-icons/md";
 
 const Contact = () => {
   return (
@@ -11,13 +13,13 @@ const Contact = () => {
           <p className="designation">MERN Stack & Unity AR/VR Developer</p>
 
           <div className="contact-info">
-            <p>📍 JP Nagar Phase 7, Bengaluru, India</p>
-            <p>📞 (+91) 7008349166, 7549139673</p>
-            <p>📧 <a href="mailto:udeshya.kumar30@gmail.com">udeshya.kumar30@gmail.com</a></p>
-            <p>🔗 <a href="https://linkedin.com/in/udeshyakumar" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+            <p><FaLocationArrow /> JP Nagar Phase 7, Bengaluru, India</p>
+            <p><MdCall /> (+91) 7008349166, 7549139673</p>
+            <p><MdOutlineEmail /> <a href="mailto:udeshya.kumar30@gmail.com">udeshya.kumar30@gmail.com</a></p>
+            <p><FaLinkedin /> <a href="https://linkedin.com/in/udeshyakumar" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
           </div>
 
-          <button className="contact-button">Contact Me</button>
+          {/* <button className="contact-button">Contact Me</button> */}
         </div>
 
         {/* Right Section - Google Map (Set to Bangalore) */}

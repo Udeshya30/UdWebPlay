@@ -1,7 +1,7 @@
 @use "../../styles/variables.scss" as *; // ✅ Import Global Variables
 
 .projects-container {
-  width: 100%;
+  // width: 100%;
   background: $projects-bg; // ✅ Light Gray for a clean section
   text-align: center;
   padding: 60px 20px;

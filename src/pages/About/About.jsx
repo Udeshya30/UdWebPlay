@@ -1,6 +1,8 @@
 import React from "react";
 import "./About.scss";
-import profileImage from "../../assets/Images/Profile.png"; // ✅ Ensure image exists
+import profileImage from "../../assets/Images/Profile.png";
+import { FaLocationArrow, FaLinkedin } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 
 const About = () => {
   return (
@@ -18,9 +20,9 @@ const About = () => {
           </p>
 
           <div className="info">
-            <p><b>📍 Location:</b> Bengaluru, India</p>
-            <p><b>📧 Email:</b> udeshya.kumar30@gmail.com</p>
-            <p><b>🔗 LinkedIn:</b> <a href="https://linkedin.com/in/udeshyakumar" target="_blank" rel="noopener noreferrer">udeshyakumar</a></p>
+            <p><FaLocationArrow className="d-flex justify-content-center align-items-center"/><b> Location:</b> Bengaluru, India</p>
+            <p><MdOutlineEmail className="d-flex justify-content-center align-items-center"/><b> Email:</b> udeshya.kumar30@gmail.com</p>
+            <p><FaLinkedin className="d-flex justify-content-center align-items-center"/><b> LinkedIn:</b> <a href="https://linkedin.com/in/udeshyakumar" target="_blank" rel="noopener noreferrer">udeshyakumar</a></p>
           </div>
 
           <h2>Experience</h2>
