@@ -1,6 +1,7 @@
 import React from "react";
 import "./Resume.scss";
 import { FaEnvelope, FaLinkedin, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import resume from "../../assets/resume.pdf"; 
 
 const Resume = () => {
   return (
@@ -101,8 +102,8 @@ const Resume = () => {
 
       {/* ✅ Download Resume Button */}
       <div className="resume-download">
-        <a href="/assets/resume.pdf" download className="btn-download">
-          Download Resume
+        <a href={resume} download="Udeshya_Kumar_Resume.pdf" className="btn-download">
+            Download Resume
         </a>
       </div>
     </div>
