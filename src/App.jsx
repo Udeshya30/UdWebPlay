@@ -8,6 +8,7 @@ import Projects from "./pages/Projects/Projects";  // ✅ Import Projects Page
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import './styles/global.scss';
+import Resume from "./pages/Resume/Resume";
 
 // ✅ Function to scroll to top on page change
 const ScrollToTop = () => {
@@ -23,12 +24,13 @@ const ScrollToTop = () => {
 function App() {
   return (
     <Router>
-      <ScrollToTop /> {/* ✅ Scroll to top whenever route changes */}
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/game/:gameId" element={<Game />} />
-        <Route path="/projects" element={<Projects />} /> {/* ✅ Added Projects Page */}
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/resume" element={<Resume />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

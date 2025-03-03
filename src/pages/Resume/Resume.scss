@@ -1,0 +1,81 @@
+@use "../../styles/variables.scss" as *;
+
+.resume-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 20px 50px;
+  text-align: left;
+}
+
+.resume-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: $text-primary;
+  margin-bottom: 20px;
+}
+
+.resume-header {
+  text-align: center;
+  font-size: 1.1rem;
+  color: $text-secondary;
+  margin-bottom: 30px;
+
+  a {
+    color: $primary-blue;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.resume-section {
+  margin-bottom: 30px;
+
+  h2 {
+    font-size: 1.8rem;
+    color: $text-primary;
+    border-bottom: 2px solid $primary-blue;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: $text-secondary;
+  }
+
+  ul {
+    padding-left: 20px;
+    list-style-type: disc;
+
+    li {
+      font-size: 1.1rem;
+      color: $text-secondary;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.resume-download {
+  text-align: center;
+  margin-top: 30px;
+
+  .btn-download {
+    display: inline-block;
+    padding: 12px 20px;
+    background: $primary-blue;
+    color: $white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: darken($primary-blue, 10%);
+    }
+  }
+}
