@@ -10,9 +10,9 @@ const HeroSection = () => {
         <h2>Hello, I'm</h2>
         <h1 className="hero-name">Udeshya Kumar</h1>
         <p>MERN Stack & Unity AR/VR Developer</p>
-        <a href={resume} download="Udeshya_Kumar_Resume.pdf" className="resume-link">
+        {/* <a href={resume} download="Udeshya_Kumar_Resume.pdf" className="resume-link">
           Download Resume
-        </a>
+        </a> */}
       </div>
       <div className="hero-image">
         <img src={profileImage} alt="Udeshya Kumar" />

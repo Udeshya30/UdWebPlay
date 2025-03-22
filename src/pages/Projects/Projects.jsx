@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import VRTerrain from "../../components/VRTerrain/VRTerrain"; 
 import VRClassroom from "../../components/VRClassroom/VRClassroom";
-import "./Projects.scss";
 import WebAR3D from "../../components/WebAR3D/WebAR3D";
+import "./Projects.scss";
+import axios from "axios";
 
 const projects = [
   {
@@ -29,6 +30,33 @@ const projects = [
 ];
 
 const Projects = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [previewURL, setPreviewURL] = useState("");
+  const [detectionResult, setDetectionResult] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    setSelectedImage(file);
+    setPreviewURL(URL.createObjectURL(file));
+    setDetectionResult(null);
+  };
+
+  const handleSendToServer = async () => {
+    if (!selectedImage) return;
+    setLoading(true);
+    const formData = new FormData();
+    formData.append("file", selectedImage);
+
+    try {
+      const res = await axios.post("https://ai-dog-detection-backend.onrender.com/predict", formData);
+      setDetectionResult(res.data);
+    } catch (error) {
+      setDetectionResult({ message: "Error occurred", count: 0 });
+    }
+    setLoading(false);
+  };
+
   return (
     <div className="projects-container">
       <h1>My Projects 🚀</h1>
@@ -38,6 +66,42 @@ const Projects = () => {
           <ProjectCard key={index} {...project} />
         ))}
       </div>
+
+      <div className="dog-detection-section">
+        <h2>🐶 Dog Detection AI (YOLOv8)</h2>
+
+        <div className="dog-detect-layout">
+          {/* Left side */}
+          <div className="left-section">
+            <input type="file" accept="image/*" onChange={handleImageChange} />
+            {previewURL && <img src={previewURL} alt="Preview" className="preview-image" />}
+          </div>
+
+          {/* Right side */}
+          <div className="right-section">
+            <button onClick={handleSendToServer} disabled={loading}>
+              {loading ? "Detecting..." : "Check for Dogs"}
+            </button>
+
+            {loading && <div className="loader"></div>}
+
+            {detectionResult && (
+              <div className="detection-result">
+                <p>{detectionResult.message}</p>
+                <p>Dog Count: {detectionResult.count}</p>
+                {detectionResult.image_base64 && (
+                  <img
+                    src={`data:image/jpeg;base64,${detectionResult.image_base64}`}
+                    alt="Detected"
+                    className="result-image"
+                  />
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
 
       <WebAR3D />
       <VRTerrain />
